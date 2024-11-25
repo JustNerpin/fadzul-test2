@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Anniversary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <div class="welcome">
+            <h1>Happy Anniversary, My Love!</h1>
+            <button onclick="enterSite()">Enter the Celebration</button>
+        </div>
+    </div>
+
+    <header id="home">
+        <nav>
+            <div class="logo">
+                <span class="highlight">Our Love</span> Journey
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#message">Messages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Our Love Story</h2>
+        <p>From the moment we met, our hearts knew we were meant to be. Here's to all the beautiful memories we've created together.</p>
+    </section>
+
+    <section id="timeline">
+        <h2>Our Journey</h2>
+        <div class="timeline">
+            <div class="event">
+                <div class="date">Day 1</div>
+                <div class="description">We met for the first time and the world felt different.</div>
+            </div>
+            <div class="event">
+                <div class="date">First Date</div>
+                <div class="description">Our first date was magical and unforgettable.</div>
+            </div>
+            <div class="event">
+                <div class="date">Anniversary</div>
+                <div class="description">Celebrating one year of love and happiness together.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="message">
+        <h2>Special Messages</h2>
+        <div id="interactive-heart">
+            <p>Click the heart for a surprise message!</p>
+            <div class="heart" onclick="showMessage()"></div>
+        </div>
+        <div id="love-message"></div>
+    </section>
+
+    <footer id="contact">
+        <h2>Get in Touch</h2>
+        <p>Here's to many more anniversaries. Let's stay connected!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

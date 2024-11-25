@@ -1,0 +1,229 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #eef6fc; /* Light blue background */
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #187bcd;
+    text-align: center;
+}
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(33, 134, 218); /* Deep blue transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay .welcome {
+    text-align: center;
+    color: white;
+}
+
+.overlay button {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #187bcd;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.overlay button:hover {
+    background-color: #187bcd;
+    color: #fff;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(90deg, #187bcd, #a3d8f7);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+}
+
+header .logo .highlight {
+    color: #a3d8f7;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #a3d8f7;
+    color: #187bcd;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 50%; /* Set the width to half the screen */
+        height: calc(100% - 60px);
+        background-color: #187bcd;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%); /* Hide by default */
+        transition: transform 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links a {
+        padding: 15px 0;
+        font-size: 1.2em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        transform: translateX(50%); /* Show the menu covering half the screen */
+    }
+}
+
+/* Timeline Section */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event {
+    background: #d5eefa; /* Soft blue */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event .date {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #187bcd; /* Deep blue */
+}
+
+/* Interactive Heart */
+#interactive-heart {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background: #187bcd; /* Deep blue */
+    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0 35%);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.heart:hover {
+    transform: scale(1.1);
+    background-color: #a3d8f7; /* Light blue */
+}
+
+#love-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #187bcd;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #187bcd, #a3d8f7); /* Gradient blue, same as header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    position: relative;
+}
+
+footer h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+footer a {
+    color: #ffe0e6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
